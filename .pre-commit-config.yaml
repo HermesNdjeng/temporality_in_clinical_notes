@@ -1,0 +1,47 @@
+repos:
+  # General code quality hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace        # Remove trailing whitespace at end of lines
+      - id: end-of-file-fixer         # Ensure files end with a newline
+      - id: check-yaml                # Validate YAML syntax
+      - id: check-json                # Validate JSON syntax
+      - id: check-case-conflict       # Check for case conflicts in filenames
+      - id: check-merge-conflict      # Check for merge conflict markers
+      - id: debug-statements          # Detect leftover debug statements (print, pdb)
+      - id: mixed-line-ending       # Ensure consistent line endings (LF)
+      - id: check-ast                # Check the abstract syntax tree for issues
+      - id: check-docstring-first
+      - id: check-xml                # Validate XML syntax
+
+  # Black - Python code formatter
+  - repo: https://github.com/psf/black
+    rev: 23.12.1
+    hooks:
+      - id: black
+        language_version: python3
+        args: ['--line-length=88']
+
+  # isort - Python import sorter
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        args: ['--profile=black', '--line-length=88']
+
+  # flake8 - Python linter
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.0.0
+    hooks:
+      - id: flake8
+        args: ['--max-line-length=88', '--extend-ignore=E203,W503']
+
+# Exclude specific files/directories from pre-commit checks
+exclude: |
+  (?x)^(
+      data/.*|
+      \.ipynb_checkpoints/.*|
+      .*\.json|
+      .*\.html
+  )$
