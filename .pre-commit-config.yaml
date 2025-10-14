@@ -10,32 +10,24 @@ repos:
       - id: check-case-conflict       # Check for case conflicts in filenames
       - id: check-merge-conflict      # Check for merge conflict markers
       - id: debug-statements          # Detect leftover debug statements (print, pdb)
-      - id: mixed-line-ending       # Ensure consistent line endings (LF)
-      - id: check-ast                # Check the abstract syntax tree for issues
+      - id: mixed-line-ending         # Ensure consistent line endings (LF)
+      - id: check-ast                 # Check the abstract syntax tree for issues
       - id: check-docstring-first
-      - id: check-xml                # Validate XML syntax
+      - id: check-xml                 # Validate XML syntax
 
-  # Black - Python code formatter
-  - repo: https://github.com/psf/black
-    rev: 23.12.1
+  # Ruff - Fast Python linter and formatter (replaces Black + flake8 + isort)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.9
     hooks:
-      - id: black
-        language_version: python3
-        args: ['--line-length=88']
+      - id: ruff                      # Linting and import sorting
+        args: [--fix, --exit-non-zero-on-fix]
+      - id: ruff-format               # Formatting
 
-  # isort - Python import sorter
-  - repo: https://github.com/pycqa/isort
-    rev: 5.13.2
+  # Pyright - Static type checker for Python
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.338
     hooks:
-      - id: isort
-        args: ['--profile=black', '--line-length=88']
-
-  # flake8 - Python linter
-  - repo: https://github.com/pycqa/flake8
-    rev: 7.0.0
-    hooks:
-      - id: flake8
-        args: ['--max-line-length=88', '--extend-ignore=E203,W503']
+      - id: pyright                   # Type checking with enforcement
 
 # Exclude specific files/directories from pre-commit checks
 exclude: |
