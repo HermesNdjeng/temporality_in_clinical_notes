@@ -182,6 +182,13 @@ Hermes Ndjeng
 
 ---
 
+## Full Report
+
+For the complete methodology, experimental results, and detailed analysis, please refer to the full report:
+
+[📄 Download Full Report (PDF)](https://drive.google.com/drive/my-drive)
+
+---
 
 ⸻
 
