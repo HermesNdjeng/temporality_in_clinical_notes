@@ -12,7 +12,7 @@
 
 For the complete methodology, experimental results, and detailed analysis, please refer to the full report:
 
-[📄 Download Full Report (PDF)](https://drive.google.com/drive/my-drive)
+[📄 Download Full Report (PDF)](https://drive.google.com/file/d/1M4PSs0sjoJ9eIfi_AWhKhhSxrysjEAG7/view?usp=sharing)
 
 
 ---
