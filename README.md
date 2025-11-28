@@ -8,6 +8,15 @@
 
 ---
 
+## Full Report
+
+For the complete methodology, experimental results, and detailed analysis, please refer to the full report:
+
+[📄 Download Full Report (PDF)](https://drive.google.com/drive/my-drive)
+
+
+---
+
 ## Abstract
 This repository implements the methodology described in
 *"Temporal Graphs for Ensuring Clinical Consistency in AI-Generated Medical Reports."*
@@ -180,15 +189,7 @@ Hermes Ndjeng
 📧 hermes.ndjeng@gmail.com
 🔗 [LinkedIn](https://www.linkedin.com/in/hermes-yan-ntjam-ndjeng-99a241217/) · [GitHub](https://github.com/HermesNdjeng)
 
----
 
-## Full Report
-
-For the complete methodology, experimental results, and detailed analysis, please refer to the full report:
-
-[📄 Download Full Report (PDF)](https://drive.google.com/drive/my-drive)
-
----
 
 ⸻
 
